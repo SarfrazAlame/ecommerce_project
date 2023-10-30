@@ -1,9 +1,11 @@
 import React from "react";
 import { BiSolidCartAlt } from "react-icons/bi";
 import { RiLoginCircleLine } from "react-icons/ri";
+import { useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
+
 
   return (
     <div className="h-20 w-full bg-gray-600 text-gray-100 flex items-center ">
@@ -15,7 +17,7 @@ const Navbar = () => {
           <NavLink to={"/cart"} className="flex gap-2">
             <BiSolidCartAlt className="text-xl mt-2 font-medium" />
             <h1 to={"/cart"} className="font-light mt-2">
-              CART
+             <span></span> CART
             </h1>
           </NavLink>
           <NavLink to={"signin"} className="flex  gap-2">

@@ -2,6 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     products: [],
+    cart: [],
     loading: false,
     error: false
 }
@@ -19,9 +20,9 @@ const productSlice = createSlice({
     name: 'product',
     initialState,
     reducers: {
-        getSingleProduct: (state, action) => {
-            state.products._id = action.payload
-        }
+       AddToCart:(state,action)=>{
+        
+       }
     },
     extraReducers: (builder) => {
         builder.addCase(fetchAllProducts.pending, (state, action) => {
@@ -40,5 +41,5 @@ const productSlice = createSlice({
     }
 })
 
-export const { getSingleProduct } = productSlice.actions
+export const {AddToCart} = productSlice.actions
 export default productSlice.reducer

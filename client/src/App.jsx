@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import HomeScreens from "./screens/HomeScreens";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ProductDetails from "./screens/ProductDetails";
-import Cart from "./components/Cart";
+import CartScreen from "./screens/CartScreen";
 const App = () => {
   return (
     <Router>
@@ -16,7 +16,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<HomeScreens />} />
             <Route path="/product/:id" element={<ProductDetails/>}/>
-            <Route path="/cart" element={<Cart/>}/>
+            <Route path="/cart" element={<CartScreen/>}/>
           </Routes>
         </div>
       </div>
