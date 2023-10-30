@@ -10,7 +10,6 @@ const HomeScreens = () => {
   useEffect(() => {
     dispatch(fetchAllProducts());
   }, [dispatch]);
-
   return (
     <div>
       {loading ? (
